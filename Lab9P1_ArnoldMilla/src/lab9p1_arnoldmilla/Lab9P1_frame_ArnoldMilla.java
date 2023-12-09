@@ -95,8 +95,8 @@ Gusanito x ;
                     Pmatriz + "\n"
                     + "1.Ingresar una instruccion \n"
                     + "2. Ejecutar instrucciones");
-        while (psos == 1){
-            
+        
+        while (psos == 1){            
            int inst = Integer.parseInt(instrucciones);
            if (inst == 1){              
                String direccion = JOptionPane.showInputDialog("Mapa\n" +
@@ -110,8 +110,10 @@ Gusanito x ;
                psos = 1;
                x.mostrarPaso(IN, matriz);
             }
-            else (inst == 2){
-           
+           else if (inst == 2){
+               Pmatriz = x.mostrarPaso(IN, matriz);
+                JOptionPane.showMessageDialog(this,"Mapa\n" + Pmatriz);
+                psos = 2;
             }
             System.out.println(IN);
         }
